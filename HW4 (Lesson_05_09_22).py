@@ -11,4 +11,4 @@ my_str = "qwerty"
 new_str = my_str * 2 if len(my_str) < 5 else my_str
 #####################
 my_str = "qwerty"
-new_str = my_str[::-1] if len(my_str) < 5 else my_str
+new_str = my_str + my_str[::-1] if len(my_str) < 5 else my_str
