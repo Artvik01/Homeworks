@@ -159,17 +159,11 @@ my_list = set(my_str1) & set(my_str2)
 # но в каждой ТОЛЬКО ПО ОДНОМУ разу.
 # Пример: для строк "aaaasdf1" и "asdfff2" ответ ["s", "d"], т.к. эти символы есть в каждой строке по одному разу.
 
-my_str1 = "aaaasdf1"
-my_str2 = "asdfff2"
+str_1 = "aaaasdf1"
+str_2 = "asdfff2"
 my_list = []
-my_set1 = set()
-my_set2 = set()
-for symbol in my_str1:
-    amount = my_str1.count(symbol)
-    if amount == 1:
-        my_set1.add(symbol)
-for symbol in my_str2:
-    amount = my_str2.count(symbol)
-    if amount == 1:
-        my_set2.add(symbol)
-my_list = my_set1 & my_set2
+for symbol in str_1:
+    if str_1.count(symbol) == 1:
+        if str_2.count(symbol) == 1:
+            my_list.append(symbol)
+print (my_list)
