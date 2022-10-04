@@ -159,11 +159,10 @@ my_list = set(my_str1) & set(my_str2)
 # но в каждой ТОЛЬКО ПО ОДНОМУ разу.
 # Пример: для строк "aaaasdf1" и "asdfff2" ответ ["s", "d"], т.к. эти символы есть в каждой строке по одному разу.
 
-str_1 = "aaaasdf1"
-str_2 = "asdfff2"
-my_list = []
-for symbol in str_1:
-    if str_1.count(symbol) == 1:
-        if str_2.count(symbol) == 1:
-            my_list.append(symbol)
-print (my_list)
+my_str1 = 'qwertyi'
+my_str2 = 'qwertyo'
+intersection = list(set(my_str1) & set(my_str2))
+unique_elements = []
+for element in intersection:
+    if my_str1.count(element) == 1 and my_str2.count(element) == 1:
+        unique_elements.append(element)
