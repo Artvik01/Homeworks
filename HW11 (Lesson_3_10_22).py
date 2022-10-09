@@ -15,7 +15,7 @@ def generate_txt_data (lenght):
     final_str = ''.join(rnd.choice(list_of_symbols) for _ in range(lenght))
     return final_str
 
-final_str = generate_txt_data (lenght)
+final_str = generate_txt_data(lenght)
 
 
 
@@ -28,18 +28,20 @@ final_str = generate_txt_data (lenght)
 # или True/False. Выбор значения должен быть равновероятным. Т.е. вероятность того, что значение будет целым
 # такая же, как и вероятность того, что будет типа float или типа bool
 
-lenght = rnd.randint(5, 20)
-def generate_json_data(lenght):
+lenght1 = rnd.randint(5, 20)
+
+def generate_json_data(lenght1):
 
     data = []
-    for _ in range(lenght):
+    for _ in range(lenght1):
         keys = ''.join(rnd.choice(string.ascii_lowercase) for _ in range(5))
         values = rnd.choice([rnd.randint(-100, 100), rnd.random(), rnd.choice([True, False])])
         dict = {keys: values}
         data.append(dict)
         json_data = json.dumps(data)
     return json_data
-json_data = generate_json_data(lenght)
+
+json_data = generate_json_data(lenght1)
 
 
 
@@ -48,3 +50,16 @@ json_data = generate_json_data(lenght)
 # В зависимости от расширения файла (txt, json) сгенерировать данные для записи и записать в данный файл.
 # Если расширение не соответствует заданным, то вывести текст "Unsupported file format"
 
+filename = 'C:\\Users\\artvi\\PycharmProjects\\Homeworks\\HW11 (Lesson_3_10_22).py\\rt.json'
+
+def generate_and_write_file(filename):
+
+    if filename.split('.')[-1] == 'json':
+        data = generate_json_data(lenght1)
+    elif filename.split('.')[-1] == 'txt':
+        data = generate_txt_data(lenght)
+    else:
+        data = "Unsupported file format"
+    return data
+
+data = generate_and_write_file(filename)
