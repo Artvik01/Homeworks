@@ -50,7 +50,7 @@ json_data = generate_json_data(lenght1)
 # В зависимости от расширения файла (txt, json) сгенерировать данные для записи и записать в данный файл.
 # Если расширение не соответствует заданным, то вывести текст "Unsupported file format"
 
-filename = 'C:\\Users\\artvi\\PycharmProjects\\Homeworks\\HW11 (Lesson_3_10_22).py\\rt.json'
+filename = 'C:\\Users\\artvi\\PycharmProjects\\Homeworks\\rt.json'
 
 def generate_and_write_file(filename):
 
