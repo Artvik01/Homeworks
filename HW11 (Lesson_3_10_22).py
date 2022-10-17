@@ -42,6 +42,7 @@ def generate_json_data(lenght1):
     return json_data
 
 json_data = generate_json_data(lenght1)
+print(json_data)
 
 
 
