@@ -10,14 +10,11 @@ args = vars(args.parse_args())
 action = args.get('action')
 amount = args.get('amount')
 
-
 if action == 'RATE':
-    data = file.rate()
-    print(data)
+    file.rate()
 
 elif action == 'AVAILABLE':
-    uah, usd = file.available()
-    print('USD', usd, 'UAH', uah)
+    file.available()
 
 elif action == 'BUY':
     if amount == 'ALL':
