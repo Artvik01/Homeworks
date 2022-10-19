@@ -11,25 +11,25 @@ action = args.get('action')
 amount = args.get('amount')
 
 if action == 'RATE':
-    file.rate()
+    file.rate(file.exchange_rate)
 
 elif action == 'AVAILABLE':
-    file.available()
+    file.available(file.usd_available, file.uah_available)
 
 elif action == 'BUY':
     if amount == 'ALL':
-        file.buy_all()
+        file.buy_all(file.usd_available, file.uah_available, file.exchange_rate, file.data)
     elif int(amount) > 0:
-        file.buy_xxx(amount)
+        file.buy_xxx(amount, file.usd_available, file.uah_available, file.exchange_rate, file.data)
 
 elif action == 'SELL':
     if amount == 'ALL':
-        file.sell_all()
+        file.sell_all(file.usd_available, file.uah_available, file.exchange_rate, file.data)
     elif int(amount) > 0:
-        file.sell_xxx(amount)
+        file.sell_xxx(amount, file.usd_available, file.uah_available, file.exchange_rate, file.ata)
 
 elif action == 'NEXT':
-    file.next_step()
+    file.next_step(file.exchange_rate, file.delta, file.data)
 
 elif action == 'RESTART':
     file.restart()
