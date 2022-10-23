@@ -26,7 +26,7 @@ elif action == 'SELL':
     if amount == 'ALL':
         file.sell_all(file.usd_available, file.uah_available, file.exchange_rate, file.data)
     elif int(amount) > 0:
-        file.sell_xxx(amount, file.usd_available, file.uah_available, file.exchange_rate, file.ata)
+        file.sell_xxx(amount, file.usd_available, file.uah_available, file.exchange_rate, file.data)
 
 elif action == 'NEXT':
     file.next_step(file.exchange_rate, file.delta, file.data)
